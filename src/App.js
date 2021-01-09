@@ -5,7 +5,8 @@ import { ContextProvider } from "./context/Context";
 import Search from "./components/Search/Search";
 import Timeline from "./components/Timeline/Timeline";
 import Header from "./components/Header/Header";
-import Pagination from "./components/Pagination/Pagination";
+
+import "./stylesheets/main.scss";
 
 const App = () => {
   return (
@@ -14,7 +15,6 @@ const App = () => {
         <Search />
         <Header />
         <Timeline />
-        <Pagination />
       </ContextProvider>
     </>
   );

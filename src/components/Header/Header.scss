@@ -1,0 +1,27 @@
+@import "../../stylesheets/abstracts/variables";
+@import "../../stylesheets/abstracts/extends";
+@import "../../stylesheets/abstracts/breakpoints";
+@import "../../stylesheets/base/typography";
+
+.header {
+  background: transparentize($primary-color-light, 0.25);
+  backdrop-filter: blur(0.25rem);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 65px;
+  &__image {
+    width: 40px;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+  }
+  &__link {
+    @extend %hover;
+    color: $primary-color;
+    font-weight: $semi-bold;
+  }
+}

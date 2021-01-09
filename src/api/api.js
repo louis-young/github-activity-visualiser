@@ -1,14 +1,6 @@
-import parseLinkHeader from "parse-link-header";
-
-const REPOSITORIES_PER_PAGE = 5;
-
-const DEFAULT_PAGE = 1;
-
-const SORT = "updated";
-
-const fetchRepositories = async (user, page = DEFAULT_PAGE) => {
+const fetchRepositories = async (user) => {
   try {
-    const endpoint = `/users/${user}/repos?type=public&sort=${SORT}&direction=desc&page=${page}&per_page=${REPOSITORIES_PER_PAGE}`;
+    const endpoint = `/users/${user}/repos?type=public&sort=updated&direction=desc`;
 
     const url = `${process.env.REACT_APP_API_BASE_URL}${endpoint}`;
 
@@ -20,21 +12,9 @@ const fetchRepositories = async (user, page = DEFAULT_PAGE) => {
 
     if (!response.ok) throw Error;
 
-    const data = {};
+    const repositories = await response.json();
 
-    data.repositories = await response.json();
-
-    data.pagination = {};
-
-    const linkHeader = response.headers.get("Link");
-
-    if (linkHeader) {
-      const parsedLinkHeader = parseLinkHeader(linkHeader);
-
-      data.pagination = parsedLinkHeader;
-    }
-
-    return data;
+    return repositories;
   } catch (error) {
     return error.message;
   }

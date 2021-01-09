@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 
 import { Context } from "../../context/Context";
 
+import "./Search.scss";
+
 const Search = () => {
   const [username, setUsername] = useState("");
 
@@ -14,18 +16,21 @@ const Search = () => {
   };
 
   return (
-    <form onSubmit={searchUser}>
-      <input
-        value={username}
-        onChange={(event) => setUsername(event.target.value)}
-        placeholder="Enter a GitHub username"
-        autoFocus
-        required
-      />
-      <button type="submit" disabled={loading}>
-        Generate
-      </button>
-    </form>
+    <section className="container container--extra-small">
+      <form onSubmit={searchUser} className="search">
+        <input
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
+          placeholder="Enter GitHub username"
+          autoFocus
+          required
+          className="search__input"
+        />
+        <button type="submit" disabled={loading} className="search__submit button">
+          Search
+        </button>
+      </form>
+    </section>
   );
 };
 

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Repository.scss";
+
 const Repository = ({ repository }) => {
   const { name, description, html_url: url, updated_at: timestamp } = repository;
 
@@ -23,13 +25,19 @@ const Repository = ({ repository }) => {
     return format;
   };
 
+  const year = getYearFromTimestamp(timestamp);
+
+  const date = getDateFromTimestamp(timestamp);
+
   return (
-    <li>
-      <p>{name}</p>
-      <p>{description}</p>
-      <p>{url}</p>
-      <p>{getYearFromTimestamp(timestamp)}</p>
-      <p>{getDateFromTimestamp(timestamp)}</p>
+    <li className="repository" data-date={year}>
+      <a href={url} target="_blank" rel="noopener nofollow noreferrer" className="repository__name">
+        {name}
+      </a>
+      {description && <p className="repository__description">{description}</p>}
+      <time className="repository__date" dateTime={date}>
+        {date}
+      </time>
     </li>
   );
 };

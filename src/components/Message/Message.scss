@@ -1,0 +1,20 @@
+@import "../../stylesheets/abstracts/variables";
+@import "../../stylesheets/abstracts/extends";
+@import "../../stylesheets/abstracts/breakpoints";
+@import "../../stylesheets/base/typography";
+
+.message {
+  text-align: center;
+  padding-top: 3rem;
+  &__title {
+    @extend %h2;
+    font-weight: $semi-bold;
+    padding-top: unset;
+    padding-bottom: 1rem;
+  }
+  &__image {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 2rem;
+  }
+}

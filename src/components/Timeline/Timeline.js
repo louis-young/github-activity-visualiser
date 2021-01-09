@@ -2,30 +2,48 @@ import React, { useContext } from "react";
 
 import { Context } from "../../context/Context";
 
+import Message from "../Message/Message";
 import Repository from "../Repository/Repository";
+import Spinner from "../Spinner/Spinner";
+
+import timeline from "../../assets/timeline.svg";
+import user from "../../assets/user.svg";
+import empty from "../../assets/empty.svg";
+
+import "./Timeline.scss";
 
 const Timeline = () => {
-  const { error, data } = useContext(Context);
+  const { loading, error, repositories } = useContext(Context);
 
-  const { repositories } = data;
+  if (loading) {
+    return <Spinner />;
+  }
 
   if (error) {
-    return <p>User not found.</p>;
+    return <Message image={user} title="User Not Found" message="Please check the username and try again." />;
   }
 
   if (!repositories) {
-    return <p>Enter a GitHub user to see a timeline of their repositories.</p>;
+    return (
+      <Message
+        image={timeline}
+        title="GitHub Activity Visualised"
+        message="Create a visual representation of the user's latest activity."
+      />
+    );
   }
 
   if (!repositories.length) {
-    return <p>We couldn't find any repositories for this user.</p>;
+    return <Message image={empty} title="No Repositories" message="This user has no public repositories." />;
   }
 
   return (
-    <section>
-      {data.repositories.map((repository) => (
-        <Repository key={repository.id} repository={repository} />
-      ))}
+    <section className="container container--extra-small">
+      <ul className="timeline">
+        {repositories.map((repository) => (
+          <Repository key={repository.id} repository={repository} />
+        ))}
+      </ul>
     </section>
   );
 };
