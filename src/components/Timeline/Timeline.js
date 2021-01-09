@@ -6,7 +6,7 @@ import Message from "../Message/Message";
 import Repository from "../Repository/Repository";
 import Spinner from "../Spinner/Spinner";
 
-import timeline from "../../assets/timeline.svg";
+import visualise from "../../assets/visualise.svg";
 import user from "../../assets/user.svg";
 import empty from "../../assets/empty.svg";
 
@@ -26,7 +26,7 @@ const Timeline = () => {
   if (!repositories) {
     return (
       <Message
-        image={timeline}
+        image={visualise}
         title="GitHub Activity Visualised"
         message="Create a visual representation of the user's latest activity."
       />
