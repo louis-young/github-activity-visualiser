@@ -1,12 +1,8 @@
-import React, { useContext } from "react";
-
-import { Context } from "../../context/Context";
+import React from "react";
 
 import "./Header.scss";
 
-const Header = () => {
-  const { loading, repositories } = useContext(Context);
-
+const Header = ({ loading, repositories }) => {
   if (loading || !repositories || !repositories.length) {
     return null;
   }

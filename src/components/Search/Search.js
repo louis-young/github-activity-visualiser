@@ -1,26 +1,24 @@
-import React, { useState, useContext } from "react";
-
-import { Context } from "../../context/Context";
+import React, { useState } from "react";
 
 import "./Search.scss";
 
-const Search = () => {
-  const [username, setUsername] = useState("");
-
-  const { getRepositories, loading } = useContext(Context);
+const Search = ({ setUsername, loading }) => {
+  const [value, setValue] = useState("");
 
   const searchUser = (event) => {
     event.preventDefault();
 
-    getRepositories(username);
+    setUsername(value);
+
+    setValue("");
   };
 
   return (
     <section className="container container--extra-small">
       <form onSubmit={searchUser} className="search">
         <input
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
+          value={value}
+          onChange={(event) => setValue(event.target.value)}
           placeholder="Enter GitHub username"
           autoFocus
           required

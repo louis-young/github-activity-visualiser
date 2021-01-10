@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-
-import { Context } from "../../context/Context";
+import React from "react";
 
 import Message from "../Message/Message";
 import Repository from "../Repository/Repository";
@@ -12,9 +10,7 @@ import empty from "../../assets/empty.svg";
 
 import "./Timeline.scss";
 
-const Timeline = () => {
-  const { loading, error, repositories } = useContext(Context);
-
+const Timeline = ({ loading, error, repositories }) => {
   if (loading) {
     return <Spinner />;
   }
