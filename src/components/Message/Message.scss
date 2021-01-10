@@ -13,8 +13,11 @@
     padding-bottom: 1rem;
   }
   &__image {
-    width: 100%;
-    max-width: 350px;
+    height: 100%;
     margin-bottom: 2rem;
+    max-height: 175px;
+    @include laptop {
+      max-height: 250px;
+    }
   }
 }

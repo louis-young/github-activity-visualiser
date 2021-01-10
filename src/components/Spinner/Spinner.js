@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Spinner.scss";
 
-import spinner from "../../assets/loading.gif";
+import spinner from "../../assets/loading.svg";
 
 const Spinner = () => {
   return (

@@ -1,4 +1,11 @@
 .spinner {
-  padding-top: 3rem;
-  text-align: center;
+  &__image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    width: 75px;
+    opacity: 0.75;
+  }
 }

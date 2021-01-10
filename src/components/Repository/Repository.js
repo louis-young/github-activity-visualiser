@@ -31,13 +31,15 @@ const Repository = ({ repository }) => {
 
   return (
     <li className="repository" data-date={year}>
-      <a href={url} target="_blank" rel="noopener nofollow noreferrer" className="repository__name">
-        {name}
-      </a>
-      {description && <p className="repository__description">{description}</p>}
-      <time className="repository__date" dateTime={date}>
-        {date}
-      </time>
+      <article className="repository__content">
+        <a href={url} target="_blank" rel="noopener nofollow noreferrer" className="repository__name">
+          {name}
+        </a>
+        {description && <p className="repository__description">{description}</p>}
+        <time className="repository__date" dateTime={date}>
+          {date}
+        </time>
+      </article>
     </li>
   );
 };

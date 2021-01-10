@@ -4,42 +4,40 @@
 @import "../../stylesheets/base/typography";
 
 .repository {
-  @extend %round;
-  background: transparentize($primary-color-light, 0.6);
-  margin-left: 3rem;
-  padding: 2rem;
-  position: relative;
-  &:before {
-    @extend %pseudo;
-    @extend %h5;
-    content: attr(data-date);
-    position: absolute;
-    left: -22.5%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    opacity: 0.5;
-    font-weight: $semi-bold;
-    display: none;
-    @include laptop {
-      display: block;
-    }
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, $primary-color-light 0%, $primary-color-light 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  padding: 1.5rem;
+  @include laptop {
+    padding: 2.5rem;
   }
-  &:after {
-    @extend %pseudo;
-    @extend %h5;
-    position: absolute;
-    left: calc(-3rem - (5px / 2));
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    z-index: 1;
-    width: 27.5px;
-    height: 27.5px;
-    border-radius: 100%;
-    padding: unset;
-    border: solid 7.5px $white;
-    background: $primary-color;
-    border-radius: 100%;
+  &:nth-child(odd) {
+    border-right: 3px solid;
+    padding-left: 0;
+  }
+  &:nth-child(even) {
+    border-left: 3px solid;
+    padding-right: 0;
+  }
+  &:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding-top: unset;
+  }
+  &:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-bottom: unset;
+  }
+  &__content {
+    @extend %round;
+    background: transparentize($primary-color-light, 0.6);
+    padding: 1.5rem;
+    @include laptop {
+      padding: 2rem;
+    }
   }
   &__name,
   &__description {
