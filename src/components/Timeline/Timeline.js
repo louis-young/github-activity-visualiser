@@ -2,7 +2,7 @@ import React from "react";
 
 import Message from "../Message/Message";
 import Repository from "../Repository/Repository";
-import Spinner from "../Spinner/Spinner";
+import Loading from "../Loading/Loading";
 
 import visualise from "../../assets/visualise.svg";
 import user from "../../assets/user.svg";
@@ -12,7 +12,7 @@ import "./Timeline.scss";
 
 const Timeline = ({ loading, error, repositories }) => {
   if (loading) {
-    return <Spinner />;
+    return <Loading />;
   }
 
   if (error) {
