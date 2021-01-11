@@ -4,20 +4,19 @@
 @import "../../stylesheets/base/typography";
 
 .repository {
-  border-top: 3px solid;
-  border-image: linear-gradient(to right, $primary-color-light 0%, $primary-color-light 100%);
-  border-image-slice: 1;
+  $border: solid 3px $primary-color-light;
+  border-top: $border;
   border-width: 3px;
   padding: 1.5rem;
   @include laptop {
     padding: 2.5rem;
   }
   &:nth-child(odd) {
-    border-right: 3px solid;
+    border-right: $border;
     padding-left: 0;
   }
   &:nth-child(even) {
-    border-left: 3px solid;
+    border-left: $border;
     padding-right: 0;
   }
   &:first-child {
