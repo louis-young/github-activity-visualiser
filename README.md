@@ -1,6 +1,6 @@
 # GitHub Activity Visualiser
 
-React application to visualise a GitHub user's latest activity by consuming data from the GitHub API.
+React application to visualise a GitHub user's latest activity by making requests to the GitHub API.
 
 ![GitHub Activity Visualiser](documentation/github-activity-visualiser.jpg)
 
