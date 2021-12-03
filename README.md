@@ -1,16 +1,16 @@
 # GitHub Activity Visualiser
 
-A React application to visualise a GitHub user's latest activity by making requests to the GitHub API.
+An application to visualise a GitHub user's latest activity written in React.
 
 ![GitHub Activity Visualiser](documentation/github-activity-visualiser.png)
 
 ## Description
 
-This is an application which visualises the GitHub activity of a given user by providing a slick user interface with a timeline of a user's recent activity.
+An application to visualise a GitHub user's latest activity in a clean dashboard with different information displayed in text, lists and different types of charts. 
 
 ## Motivation
 
-I built this application to learn React and to practice data fetching from a REST API and rendering fetched data.
+This was a learning project to strengthen my understanding of making multiple network requests in parallel and rendering dynamic data in React.
 
 ### Available Scripts
 
