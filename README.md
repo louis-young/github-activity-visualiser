@@ -6,11 +6,11 @@ An application to visualise a GitHub user's latest activity - written in React.
 
 ## Description
 
-An application to visualise a GitHub user's latest activity in a clean dashboard with different information displayed in text, lists and different types of charts. 
+An application to visualise a GitHub user's latest activity in a clean timeline.
 
 ## Motivation
 
-This was a learning project to strengthen my understanding of making multiple network requests in parallel and rendering dynamic data in React.
+This was a learning project to strengthen my understanding of fetching and rendering data in React.
 
 ### Available Scripts
 
