@@ -6,7 +6,7 @@ An application to visualise a GitHub user's latest activity - written in React.
 
 ## Description
 
-An application to visualise a GitHub user's latest activity in a clean timeline.
+An application to visualise a GitHub user's latest activity in a clean and intuitive timeline.
 
 ## Motivation
 
