@@ -11,6 +11,7 @@ A timeline visualisation of a GitHub user's latest activity with a clean and int
 ## Technologies
 
 - React.
+- Sass (BEM).
 - GithHub API.
 
 ## Motivation
