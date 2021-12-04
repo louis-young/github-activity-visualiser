@@ -17,7 +17,7 @@ This was a learning project to strengthen my understanding of fetching and rende
 - JavaScript.
 - React.
 - Sass (BEM).
-- GithHub API.
+- GitHub API.
 
 ---
 
