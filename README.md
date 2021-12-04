@@ -8,7 +8,10 @@ A timeline visualisation of a GitHub user's latest activity.
 
 A timeline visualisation of a GitHub user's latest activity with a clean and intuitive user interface.
 
-Built with React.
+## Technologies
+
+- React.
+- GithHub API.
 
 ## Motivation
 
