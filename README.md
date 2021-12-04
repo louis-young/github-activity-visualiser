@@ -1,12 +1,14 @@
 # GitHub Activity Visualiser
 
-A timeline visualisation of a GitHub user's latest activity - built with React.
+A timeline visualisation of a GitHub user's latest activity.
 
 ![GitHub Activity Visualiser](documentation/github-activity-visualiser.png)
 
 ## Description
 
 A timeline visualisation of a GitHub user's latest activity with a clean and intuitive user interface.
+
+Built with React.
 
 ## Motivation
 
