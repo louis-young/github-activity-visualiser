@@ -1,3 +1,5 @@
+⚠️ Please note that this is an old project and does not reflect the quality of my current work.
+
 # GitHub Activity Visualiser
 
 A timeline visualisation of a GitHub user's latest activity.
