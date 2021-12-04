@@ -8,15 +8,15 @@ A timeline visualisation of a GitHub user's latest activity.
 
 A timeline visualisation of a GitHub user's latest activity with a clean and intuitive user interface.
 
+## Motivation
+
+This was a learning project to strengthen my understanding of fetching and rendering data in React.
+
 ## Technologies
 
 - React.
 - Sass (BEM).
 - GithHub API.
-
-## Motivation
-
-This was a learning project to strengthen my understanding of fetching and rendering data in React.
 
 ### Available Scripts
 
